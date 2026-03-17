@@ -33,10 +33,37 @@ Bureaucrat::Bureaucrat(const Bureaucrat& other) : _name(other._name), _grade(oth
 
 Bureaucrat& Bureaucrat::operator=(const Bureaucrat& other)
 {
-
+	if (this != &other)
+		_grade = other._grade
+	return *this;
 }
 
 
 Bureaucrat::~Bureaucrat()
 {
+}
+
+std::string getName() const
+{
+
+}
+
+int getGrade() const
+{
+
+}
+
+incrementGrade()
+{
+
+}
+
+decrementGrade()
+{
+
+}
+
+std::ostream& operator<<(std::ostream& out, const Bureaucrat& b)
+{
+	
 }
