@@ -15,6 +15,7 @@
 
 # include <string>
 # include <iostream>
+# include <exception>
 
 class Bureaucrat
 {
@@ -43,6 +44,8 @@ class Bureaucrat
 
 		std::string getName() const;
 		int getGrade() const;
+		void incrementGrade();
+		void decrementGrade();
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);
