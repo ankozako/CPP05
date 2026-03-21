@@ -17,13 +17,13 @@
 # include <iostream>
 # include <exception>
 
-class Form;
+class AForm;
 
 class Bureaucrat
 {
 	private:
-		const std::string _name;
-		int _grade;
+		const std::string	_name;
+		int					_grade;
 
 	public:
 		Bureaucrat();
@@ -44,11 +44,12 @@ class Bureaucrat
 				const char* what() const throw();
 		};
 
-		std::string getName() const;
-		int getGrade() const;
-		void incrementGrade();
-		void decrementGrade();
-		void signForm(Form& f);
+		std::string	getName() const;
+		int			getGrade() const;
+		void		incrementGrade();
+		void		decrementGrade();
+		void		signForm(AForm& f);
+		void		executeForm(AForm const& f);
 };
 
 std::ostream& operator<<(std::ostream& out, const Bureaucrat& b);
